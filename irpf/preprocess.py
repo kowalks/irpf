@@ -6,7 +6,8 @@ import pandas as pd
 def read_data(data_dir='data') -> pd.DataFrame:
     """Reads all excel files in data_dir and returns a single dataframe."""
     dfs = []
-    for file in os.listdir(data_dir):
+    excel_files = (file for file in os.listdir(data_dir) if file.endswith('.xlsx'))
+    for file in excel_files:
         path = os.path.join(data_dir, file)
         df = pd.read_excel(path)
         dfs.append(df)

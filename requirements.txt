@@ -1,3 +1,6 @@
 pandas[excel]
 pytest
 ipykernel
+yfinance
+matplotlib
+scipy
